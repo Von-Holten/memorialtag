@@ -33,13 +33,18 @@ namespace Teest
                 labPostnr.Text = test.Table.Rows[0][6].ToString();
                 labVej.Text = test.Table.Rows[0][7].ToString();
                 kundeID.Text = "Kunde ID: " + test.Table.Rows[0][8].ToString();
+
+
+                DataTable dt = test.ToTable();
+                
             }
             catch
             {
                 Response.Redirect("./template.aspx?id=1");
             }
-
+        
 
         }
+
     }
 }
