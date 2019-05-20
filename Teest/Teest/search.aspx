@@ -3,6 +3,7 @@
     
     <article class="minimum">
         <h1>Søgeresultater:</h1>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </article>
 
 </asp:Content>

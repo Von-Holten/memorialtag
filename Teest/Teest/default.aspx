@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Teest._default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Teest._default" MaintainScrollPositionOnPostback="true" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
 
@@ -26,7 +26,7 @@
     <article id="soeg" class="search">
         <div class="div">
         <center>
-        <input type="text" name="Search" placeholder="Søg f.eks. på ID, Navn, Årstal, By eller Kirkegård..." id="Search" style="width: 40vw; height: 1vh;" class="wrapper" autofocus>
+        <asp:TextBox runat="server" ID="Search" type="text" name="Search" placeholder="Søg f.eks. på ID, Navn, Årstal, By eller Kirkegård..." style="width: 40vw; height: 1vh;" class="wrapper"/>
         <asp:Button ID="btnSearch" runat="server" Text="Søg" style="margin-left: -28vh;" OnClick="btnSearch_Click" Class="button"/></center>
         </div>
     </article>

@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Teest</RootNamespace>
-    <AssemblyName>Teest</AssemblyName>
+    <RootNamespace>teest</RootNamespace>
+    <AssemblyName>teest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -46,7 +46,15 @@
     <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -70,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\mh.jpg" />
     <Content Include="Images\arrowleft.png" />
     <Content Include="Images\arrowright.png" />
     <Content Include="Images\avatar.png" />
@@ -91,12 +100,36 @@
     <Content Include="Images\mail.png" />
     <Content Include="Images\nfc.jpg" />
     <Content Include="Images\order.jpg" />
+    <Content Include="Images\picVideo.jpg" />
+    <Content Include="models\mtDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mtDB.edmx</DependentUpon>
+      <LastGenOutput>mtDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="models\mtDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mtDB.edmx</DependentUpon>
+      <LastGenOutput>mtDB.cs</LastGenOutput>
+    </Content>
     <Content Include="payment.aspx" />
     <Content Include="Images\phone.png" />
     <Content Include="Images\profileavatar.png" />
     <Content Include="Images\qr.jpg" />
     <Content Include="products.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="scripts\dropzone\basic.css" />
+    <Content Include="scripts\dropzone\basic.min.css" />
+    <Content Include="scripts\dropzone\dropzone-amd-module.js" />
+    <Content Include="scripts\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="scripts\dropzone\dropzone.css" />
+    <Content Include="scripts\dropzone\dropzone.js" />
+    <Content Include="scripts\dropzone\dropzone.min.css" />
+    <Content Include="scripts\dropzone\dropzone.min.js" />
+    <None Include="scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="scripts\jquery-3.4.1.js" />
+    <Content Include="scripts\jquery-3.4.1.min.js" />
+    <Content Include="scripts\jquery-3.4.1.slim.js" />
+    <Content Include="scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="search.aspx" />
     <Content Include="some\bloggr.png" />
     <Content Include="some\deviantart.png" />
@@ -147,6 +180,27 @@
     <Compile Include="editor.aspx.designer.cs">
       <DependentUpon>editor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="models\Grav.cs">
+      <DependentUpon>mtDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Login.cs">
+      <DependentUpon>mtDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\mtDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mtDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\mtDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mtDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\mtDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mtDB.edmx</DependentUpon>
+    </Compile>
     <Compile Include="payment.aspx.cs">
       <DependentUpon>payment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -192,9 +246,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="models\mtDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>mtDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="models\mtDB.edmx.diagram">
+      <DependentUpon>mtDB.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="some\simple-flat-social-icons.psd" />
     <Content Include="Site.Master" />
+    <Content Include="scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="scripts\jquery-3.4.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -203,7 +266,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="scripts\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,7 +11,7 @@ namespace Teest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Text = Convert.ToString(Session["Værdi"]);
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)

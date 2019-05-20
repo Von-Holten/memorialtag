@@ -22,15 +22,6 @@ namespace Teest {
         protected global::System.Web.UI.WebControls.TextBox txtFornavn;
         
         /// <summary>
-        /// txtFødeby control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFødeby;
-        
-        /// <summary>
         /// txtEfternavn control.
         /// </summary>
         /// <remarks>
@@ -38,15 +29,6 @@ namespace Teest {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEfternavn;
-        
-        /// <summary>
-        /// txtSidstebopæl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSidstebopæl;
         
         /// <summary>
         /// txtFødselsdato control.
@@ -58,15 +40,6 @@ namespace Teest {
         protected global::System.Web.UI.WebControls.TextBox txtFødselsdato;
         
         /// <summary>
-        /// txtStilling control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStilling;
-        
-        /// <summary>
         /// txtDødsdato control.
         /// </summary>
         /// <remarks>
@@ -76,31 +49,58 @@ namespace Teest {
         protected global::System.Web.UI.WebControls.TextBox txtDødsdato;
         
         /// <summary>
-        /// txtNærmeste control.
+        /// txtFødeby control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNærmeste;
+        protected global::System.Web.UI.WebControls.TextBox txtFødeby;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtSidsteBopæl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtSidsteBopæl;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtStilling control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtStilling;
+        
+        /// <summary>
+        /// txtNærmestePårørende control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNærmestePårørende;
+        
+        /// <summary>
+        /// txtFacebookLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFacebookLink;
+        
+        /// <summary>
+        /// txtMyHeritageLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMyHeritageLink;
         
         /// <summary>
         /// fileUploadProfile control.
@@ -110,6 +110,15 @@ namespace Teest {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fileUploadProfile;
+        
+        /// <summary>
+        /// StatusLabelProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StatusLabelProfile;
         
         /// <summary>
         /// txtaBiografi control.
@@ -148,40 +157,40 @@ namespace Teest {
         protected global::System.Web.UI.WebControls.TextBox txtaBedrifter;
         
         /// <summary>
-        /// TextBox1 control.
+        /// dropdownTitel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.DropDownList dropdownTitel;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtNavn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtNavn;
         
         /// <summary>
-        /// TextBox5 control.
+        /// txtÅr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtÅr;
         
         /// <summary>
-        /// TextBox6 control.
+        /// txtLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox txtLink;
         
         /// <summary>
         /// btnRelationer control.
@@ -238,13 +247,31 @@ namespace Teest {
         protected global::System.Web.UI.WebControls.Button btnTidslinje;
         
         /// <summary>
-        /// ListView1 control.
+        /// listTidslinje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.ListView listTidslinje;
+        
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// AjaxFileUpload1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AjaxFileUpload AjaxFileUpload1;
         
         /// <summary>
         /// btnAfslutRedigering control.
@@ -254,5 +281,14 @@ namespace Teest {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAfslutRedigering;
+        
+        /// <summary>
+        /// labError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labError;
     }
 }

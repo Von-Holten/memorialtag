@@ -1,96 +1,132 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="template.aspx.cs" Inherits="Teest.template" MasterPageFile="~/Site.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="template.aspx.cs" Inherits="Teest.template" MasterPageFile="~/Site.Master" MaintainScrollPositionOnPostback="true" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
 
-			    <article class="info">
+                <article class="info">
 					<br>
-					<h1>Fulde navn på afdøde</h1>
+                        <div class="div">
+					    <h1><asp:Label ID="labFuldeNavn" runat="server" Text="Label" Style="width: 50%;"/></h1>
+						<h2><asp:Label ID="labKirkegård" runat="server" Text="Label" Style="width: 25%;"/></h2>
+                        <h2><asp:Label ID="labID" runat="server" Text="Label" Style="width: 25%;"/></h2>
+                        </div>
+					<br>
 					<table style="width: 100%; text-align: left;">
 					<tr>
 						<th>Fornavn:</th>
 						<th>Efternavn:</th>
 					</tr>
 					<tr>
-						<td>Tekst</td>
-						<td>Tekst</td>
+						<td><asp:Label ID="labFornavn" runat="server" Text="Label"></asp:Label></td>
+						<td><asp:Label ID="labEfternavn" runat="server" Text="Label"></asp:Label></td>
 					</tr>
 					<tr>
 						<th>Fødselsdato:</th>
 						<th>Dødsdato:</th>
 					</tr>
 					<tr>
-						<td>Tekst</td>
-						<td>Tekst</td>
+						<td><asp:Label ID="labFødselsdato" runat="server" Text="Label"></asp:Label></td>
+						<td><asp:Label ID="labDødsdato" runat="server" Text="Label"></asp:Label></td>
 					</tr>
 					<tr>
 						<th>Fødeby:</th>
 						<th>Sidste Bopæl:</th>
 					</tr>
 					<tr>
-						<td>Tekst</td>
-						<td>Tekst</td>
+						<td><asp:Label ID="labFødeby" runat="server" Text="Label"></asp:Label></td>
+						<td><asp:Label ID="labSidsteBopæl" runat="server" Text="Label"></asp:Label></td>
 					</tr>
 					<tr>
 						<th>Stilling:</th>
 						<th>Nærmeste pårørende:</th>
 					</tr>
 					<tr>
-						<td>Tekst</td>
-						<td>Tekst</td>
+						<td><asp:Label ID="labStilling" runat="server" Text="Label"></asp:Label></td>
+						<td><asp:Label ID="labNærmestePårørende" runat="server" Text="Label"></asp:Label></td>
 					</tr>
 					</table>
-					<br>
-					<p>Ikoner til f.eks. FB mindeside og My Heritage side her</p>
+                    <div class="div">
+                        <p></p>
+                        <p></p>
+                        <asp:ImageButton ID="btnLinkFB" runat="server"  ImageUrl="~/Images/facebook.png" style="Height:5vh; Width:5vh;" />
+                        <asp:ImageButton ID="btnLinkMH" runat="server"  ImageUrl="~/Images/mh.jpg" style="Height:5vh; Width:5vh;" />
+                        <p></p>
+                        <p></p>
+                    </div>       
             </article>
-
 	
-            <aside class="img" style="float: right; background: url(./images/avatar.png); background-repeat: no-repeat; background-position: center; background-size: 100% 100%;">
-			<br>
-
+            <aside id="billedeSkift" runat="server" class="imgUpload" style="background: url(./images/avatar.png); background-repeat: no-repeat; background-position: center;">
+                <asp:Image class="billede" ID="imgProfil" runat="server" style="max-width: 100%; min-height: 60%; max-height: 100%;"/>
             </aside>
 
-            <section class="bio">
+            <section class="bio" id="Biografi" runat="server">
 				<br />
-					<h1>Biografi:</h1>
-					<br>
-					<h3>Uddannelse:</h3>
-					<br>
-					<h3>Karriere:</h3>
-					<br>
-					<h3>Bedrifter:</h3>
+                <div class="border">
+                    <h1><asp:Label ID="labBiografiOverskrift" runat="server" Text="Biografi:"/></h1><br />
+                    <p><asp:Label ID="labBiografi" runat="server" Text="Label"/></p>
+                    <br/>
+                </div>
+                <div class="border">
+                    <br/>
+                    <h4><asp:Label class="h4" ID="labUdannelseOverskrift" runat="server" Text="Uddannelse:"/></h4><br />
+                    <p><asp:Label ID="labUddannelse" runat="server" Text="Label"/></p>
+					<br/>
+                </div>
+                <div class="border">
+					<br/>
+                    <h4><asp:Label ID="labKarriereOverskrift" runat="server" Text="Karriere:"/></h4><br />
+                    <p><asp:Label ID="labKarriere" runat="server" Text="Label"/></p>
+					<br/>
+                </div>
+                <div class="border">
+					<br/>
+                    <h4><asp:Label ID="labBedrifterOverskrift" runat="server" Text="Bedrifter:"/></h4><br />
+                    <p><asp:Label ID="labBedrifter" runat="server" Text="Label"/></p>
+                    <br/>
+                </div>
+                <br/>
             </section>
-
-			<section class="relationer">
+            
+			<section class="relationer" id="Relations" runat="server">
 							<br />
 					<h1>Relationer:</h1>
 					<br>
 					<br>
 			</section>
-			<aside class="timeline">
-							<br />
-					<h1>Tidslinje:</h1>
-					<br>
-					<br>
+
+			<aside class="timeline" id="TimeLine" runat="server">
+				<br />
+				<h1>Tidslinje:</h1>
+				<br>
+				<br>
+                <asp:Label ID="tidslinjeFødselsår" runat="server" Text="Født"></asp:Label>
+                <asp:Label ID="tidslinjeDødsår" runat="server" Text="Død"></asp:Label>
 			</aside>
 
-	<section class="galleri">
+	<section class="galleri" runat="server">
 		<center><h1>Galleri:</h1></center>
-		<table style="width: 100%; height: 85%">
-		<tr>
-		<td><a><img src="./Images/arrowleft.png" alt="Billede" style="width:8vw; height:20vh;"/></a></td>
-		<td width="80%" style="background: url(./Images/imgplaceholder.png); background-repeat: no-repeat; background-position: center; background-size: 90% 90%;"></td>
-		<td><a><img src="./Images/arrowright.png" alt="Billede" style="width:8vw; height:20vh;"/></a></td>
-		</tr>
-  </table>
-		<br>
-    <center><a>Billede</a> | <a>Video</a> | <a>Audio</a></center>
+        <br />
+        <center><asp:Image ID="bigImage" runat="server" style="max-height:60vh; max-width:70vw;"/></center>
+        <center><video runat="server" id="video" style="width: 70vw; height: 60vh;" Visible="false" controls autoplay>
+            <source src=""/>
+            Din browser understøtter ikke video med html
+            </video></center>
+		<br />
 	</section>
 
   <section class="thumbnails">
-    <br>
-    <br>
-    <center><p>Thumbnails af billeder her</p></center>
-    <br>
-    <br>
+    <div id="ImageGallery" style="overflow:auto; height:100%; width:100%; display:inline-block; position: relative; overflow-x: scroll; overflow-y: hidden; -webkit-overflow-scrolling: touch; white-space: nowrap;">
+    <center><asp:ImageButton ID="Image1" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image1_Click"/>
+    <asp:ImageButton ID="Image2" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image2_Click"/>
+    <asp:ImageButton ID="Image3" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image3_Click"/>
+    <asp:ImageButton ID="Image4" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image4_Click"/>
+    <asp:ImageButton ID="Image5" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image5_Click"/>
+    <asp:ImageButton ID="Image6" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image6_Click"/>
+    <asp:ImageButton ID="Image7" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image7_Click"/>
+    <asp:ImageButton ID="Image8" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image8_Click"/>
+    <asp:ImageButton ID="Image9" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image9_Click"/>
+    <asp:ImageButton ID="Image10" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image10_Click"/>
+    <asp:ImageButton ID="Image11" runat="server" style="height: 17vh; max-width: 14vw; display: inline-block; margin: 0 0.25%;" Visible="False" OnClick="Image11_Click"/>
+    </center></div>
   </section>
-    </asp:Content>
+
+</asp:Content>

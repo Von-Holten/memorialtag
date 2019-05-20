@@ -188,7 +188,7 @@ article.info {
 }
 
 article.minimum{
-    min-height: 80vh;
+    min-height: 45vh;
 }
 
 /*#############################################*/
@@ -222,8 +222,25 @@ aside.buy {
 
 aside.img {
     height: 45vh;
-  	width: 16vw;
+    width: 16vw;
     margin-top: 1vh;
+    float: right;
+}
+
+aside.imgUpload {
+    height: 45vh;
+    width: 26vw;
+    margin-top: 1vh;
+    float: right;
+    padding-right: 0vw;
+    padding-left: 0vh;
+    text-align: center;
+        
+}
+
+.billede {
+    vertical-align: middle;
+    position: relative;
 }
 
 aside.timeline {
@@ -243,13 +260,14 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     margin: 1vh 0vh;
     border: 1px solid #ccc;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.7vw;
+    font-size: 1.8vh;
     border-radius: 25px;
 }
 
-input, textarea{
+input, textarea {
     margin: 1vh 0vh;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8vh;
 }
 
 input[type=email].edit, input[type=password].edit, input[type=text].edit, input[type=number].edit {
@@ -257,13 +275,15 @@ input[type=email].edit, input[type=password].edit, input[type=text].edit, input[
     height: 1vh;
     padding: 1.2vh 1.2vh;
     margin: -0.8vh 0vh;
+    font-size: 1.8vh;
 }
 
-input[type=email].small, input[type=password].small, input[type=text].small, input[type=number].small {
+input[type=email].small, input[type=password].small, input[type=text].small, input[type=number].small, label.small {
     width: 10vw;
     height: 1vh;
     padding: 1.2vh 1.2vh;
     margin: -0.8vh 0vh;
+    font-size: 1.8vh;
 }
 
 /*#############################################*/
@@ -307,6 +327,12 @@ div.div {
     justify-content: space-between;
 }
 
+div.border{
+    border-bottom: groove;
+    border-bottom-color: black;
+    border-bottom-width: thin;
+}
+
 /*#############################################*/
 /*################### TEKST ###################*/
 /*#############################################*/
@@ -317,12 +343,16 @@ h1{
 
 h2{
     font-size: 2.5vmin;
-    margin-bottom: 1vmin;
 }
 
 h3{
     font-size: 2vmin;
     margin-bottom: 1vmin;
+}
+
+h4{
+    font-size: 2.5vmin;
+    font-weight: lighter;
 }
 
 p{
@@ -344,12 +374,12 @@ li{
 }
 
 th{
-    font-size: 3vmin;
+    font-size: 2.2vmin;
 }
 
 td{
-    font-size: 2.5vmin;
-		padding-bottom: 2vmin;
+    font-size: 3.2vmin;
+	padding-bottom: 2vmin;
 }
 
 /*#############################################*/

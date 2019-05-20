@@ -21,7 +21,7 @@ namespace Teest
             using (SqlConnection sqlCon = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=memorialtag;Integrated Security=True;"))
             {
                 sqlCon.Open();
-                string query = "SELECT COUNT(1) FROM Login WHERE Username=@Username AND Password=@Password";
+                string query = "SELECT COUNT(1) FROM Kunde WHERE Email=@Username AND Password=@Password";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
                 sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
                 sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
@@ -42,6 +42,7 @@ namespace Teest
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            Session["Værdi"] = Search.Text;
             Response.Redirect("./search.aspx");
         }
     }
